@@ -1,7 +1,7 @@
-/**
+/*
 Theme Name: The Conference
 Theme URI: -
-Author: Jamie Fraser!
+Author: Jamie Fraser
 Author URI: http://www.jamiefraser.co.uk
 Description: The Conference is a theme designed specifically for conference / event centered sites
 Version: 1.0
@@ -9,9 +9,20 @@ License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: responsive, mobile-ready, mobile, conference, materialize, sidebar, 2 sidebar, left sidebar, right sidebar, 2 sidebar, red, blue, green, yellow, black, white, gold, cyan, silver, grey, elegant
 Text Domain: theconference
-**/ 
+*/ 
 
-h1{ background:Green;}
+.inlineblock {
+	display:inline !important;
+	display:inline-block !important;
+	zoom:1 !important;
+}
+ul.sub-menu ul.sub-menu {
+	border-left:20px #eee solid;
+
+}
+nav ul.sub-menu i.material-icons.tiny{
+	font-size:0.8em !important;
+}
 
 @media all and (max-width:600px) {
 	div.s-novalign {

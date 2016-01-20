@@ -4,6 +4,7 @@
 **/
 ?>
 
+<?php _TCCE('primary-menu-mobile') ?>
 <?php wp_footer(); ?>
 </body>
 </html>

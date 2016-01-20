@@ -11,10 +11,11 @@ class SetUp {
 		self::registerStyles();
 
 		if (! $admin) {
-			wp_enqueue_script('MaterializeJS');
 			wp_enqueue_style('MaterializeCSS');
 			wp_enqueue_style('MaterializeICONS');
 			wp_enqueue_style('Theme');
+			wp_enqueue_script('MaterializeJS');
+			wp_enqueue_script('Theme');
 		}
 	}
 
@@ -24,6 +25,13 @@ class SetUp {
 			'MaterializeJS', 
 			'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js',
 			array('jquery'),
+			false,
+			true
+		);
+		wp_register_script(
+			'Theme',
+			get_template_directory_uri() . '/script.js',
+			array('jquery', 'MaterializeJS'),
 			false,
 			true
 		);

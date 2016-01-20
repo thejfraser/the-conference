@@ -36,11 +36,9 @@
 		</div>
 		<nav class="<?php _TCEO('nav-class')?>">
 			<div class="nav-wrapper">
-				<ul class="hide-on-small-only hide">
-
-				</ul>
-				<ul class="hide-on-med-and-up">
-					<li><a id='menu-open'><i class="material-icons">menu</i> <?php _e('Menu', _TXTDOM()) ?></a></li>
+				<?php _TCCE('primary-menu') ?>
+				<ul class="ahide-on-med-and-up">	
+					<li><a id='primary-menu-open' data-activates="primary-menu-mobile"><i class="tiny material-icons left">menu</i> <?php _e('MENU', _TXTDOM()) ?></a></li>
 				</ul>
 			</div>
 		</nav>
