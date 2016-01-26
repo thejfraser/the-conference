@@ -17,5 +17,5 @@ jQuery(document).ready(function($){
 		$this.attr("href","#menu").bind("click", function(e){e.preventDefault();e.stopPropagation();uls.toggleClass("hide");})
 			.append("<i class='material-icons left tiny'>arrow_drop_down</i>");
 	});
-	$("a#primary-menu-open").sideNav();
+	$("a#primary-menu-open").sideNav('show');
 });

@@ -10,9 +10,16 @@ if (function_exists('spl_autoload_register')) {
 global $TheConference;
 $TheConference = new TheConference(dirname(__FILE__));
 $TheConference->runSetup(is_admin());
+$TheConference->assignCacher(new \TheConference\Classes\FileCache($TheConference->getCachePath()));
 
-$TheConference->registerComponent('primary-menu', \TheConference\Components\PrimaryMenu::readyUp());
-$TheConference->registerComponent('primary-menu-mobile', \TheConference\Components\PrimaryMenuMobile::readyUp());
+$TheConference->registerComponent('header-widget-area', 		'HeaderWidgetArea');
+$TheConference->registerComponent('primary-menu', 				'PrimaryMenu');
+$TheConference->registerComponent('primary-menu-mobile', 		'PrimaryMenuMobile');
+$TheConference->registerComponent('left-sidebar-widget-area', 	'LeftSidebarWidgetArea');
+$TheConference->registerComponent('right-sidebar-widget-area', 	'RightSidebarWidgetArea');
+$TheConference->registerComponent('footer-widget-area',			'FooterWidgetArea');
+
+$TheConference->registerExtension('recent-updates',				'RecentUpdatesPostType');
 
 
 /**
@@ -38,6 +45,14 @@ function _TCCE($component)
 {
 	global $TheConference;
 	echo $TheConference->getComponent($component)->render();
+}
+/**
+ * TheConferenceComponentGet
+**/
+function _TCCG($component)
+{
+	global $TheConference;
+	return $TheConference->getComponent($component)->render();
 }
 
 function _TXTDOM() {

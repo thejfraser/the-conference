@@ -17,6 +17,7 @@
 </head>
 <body class="<?php _TCEO('body-class');?>">
 	<header class="<?php _TCEO('header-class')?>">
+		<?php if (_TCGO('enable-container')) {?><div class='container'><?php } ?>
 		<div class="row valign-wrapper s-novalign">
 			<div class="col valign center-align <?php echo (_TCGO('header-widgets', '1') == '1') ? 's12 m5' : 's12' ?>">
 				<h1>
@@ -30,16 +31,38 @@
 			</div>
 			<?php if (_TCGO('header-widgets', '1') == '1') {?>
 				<div class="col valign s12 m7 center-align blue">
-					WIDGET GOES HERE!
+					<?php _TCCG('header-widget-area'); ?>
 				</div>
 			<?php } ?>
 		</div>
+		<?php if (_TCGO('enable-container')) {?></div><?php } ?>
 		<nav class="<?php _TCEO('nav-class')?>">
+			<?php if (_TCGO('enable-container')) {?><div class='container'><?php } ?>
 			<div class="nav-wrapper">
 				<?php _TCCE('primary-menu') ?>
-				<ul class="ahide-on-med-and-up">	
+				<ul class="hide-on-med-and-up">	
 					<li><a id='primary-menu-open' data-activates="primary-menu-mobile"><i class="tiny material-icons left">menu</i> <?php _e('MENU', _TXTDOM()) ?></a></li>
 				</ul>
 			</div>
+			<?php if (_TCGO('enable-container')) {?></div><?php } ?>
 		</nav>
 	</header>
+
+	<main class="<?php _TCEO('main-class') ?>">
+
+		<?php if (_TCGO('enable-container')) {?>
+			<div class='container'>
+		<?php } ?>		
+
+			<div class='row'>
+				
+
+				<?php 
+					$m = 12;
+					$l = 12;
+					$tot = (_TCGO('left-sidebar') == 1) + (_TCGO('right-sidebar'));
+					$m -= (3 * $tot);
+					$l -= (2 * $tot);
+				?>
+				<div class='col s12 m<?php echo $m?> l<?php echo $l ?> <?php if(_TCGO('left-sidebar')) { echo 'push-m3 push-l2'; }?>' >
+<p>HELLO WORLD</p>
