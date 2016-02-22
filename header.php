@@ -19,7 +19,7 @@
 	<header class="<?php _TCEO('header-class')?>">
 		<?php if (_TCGO('enable-container')) {?><div class='container'><?php } ?>
 		<div class="row valign-wrapper s-novalign">
-			<div class="col valign center-align <?php echo (_TCGO('header-widgets', '1') == '1') ? 's12 m5' : 's12' ?>">
+			<div class="col valign left-align <?php echo (_TCGO('header-widgets', '1') == '1') ? 's12 m6' : 's12' ?>">
 				<h1>
 					<a href='<?php get_bloginfo('wpurl')?>'>
 						<?php _TCEO('text-site-title', get_bloginfo('sitename'))?>
@@ -30,7 +30,7 @@
 				<?php } ?>
 			</div>
 			<?php if (_TCGO('header-widgets', '1') == '1') {?>
-				<div class="col valign s12 m7 center-align blue">
+				<div class="col valign s12 m6 center-align blue">
 					<?php _TCCG('header-widget-area'); ?>
 				</div>
 			<?php } ?>

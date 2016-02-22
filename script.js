@@ -1,6 +1,7 @@
 jQuery(document).ready(function($){
 	var menuindex = 0;
 	var $body = $("body");
+	var $window = $(window);
 	$("ul#primary-menu>li.menu-item-has-children>a").each(function(){
 		var n = 'primary-menu-dropdown-' + menuindex;
 		var $this = $(this);
@@ -18,4 +19,17 @@ jQuery(document).ready(function($){
 			.append("<i class='material-icons left tiny'>arrow_drop_down</i>");
 	});
 	$("a#primary-menu-open").sideNav('show');
+	function resizeBody() {
+		if ($window.width()>600) {
+			var wheight = $(window).height();
+			wheight -= $body.find("header").outerHeight();
+			wheight -= $body.find("footer").outerHeight();
+		} else {
+			wheight=0;
+		}
+		$body.children("main").css("min-height", wheight).children("div").css("min-height", wheight).children().css("min-height",wheight);
+	}
+	$window.bind("resize", resizeBody);
+	resizeBody();
+
 });

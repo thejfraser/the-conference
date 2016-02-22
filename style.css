@@ -11,16 +11,9 @@ Tags: responsive, mobile-ready, mobile, conference, materialize, sidebar, 2 side
 Text Domain: theconference
 */ 
 
-body {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
+footer.page-footer {
+	margin-top:0 !important;
 }
-
-main {
-	flex: 1 0 auto;
-}
-
 .inlineblock {
 	display:inline !important;
 	display:inline-block !important;
@@ -32,6 +25,10 @@ ul.sub-menu ul.sub-menu {
 }
 nav ul.sub-menu i.material-icons.tiny{
 	font-size:0.8em !important;
+}
+body>main>div.row,
+body>main>div.container>div.row{
+	margin-bottom:0;
 }
 
 @media all and (max-width:600px) {

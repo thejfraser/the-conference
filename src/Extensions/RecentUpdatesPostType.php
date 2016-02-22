@@ -52,6 +52,4 @@ class RecentUpdatesPostType implements Extension {
 		);
 		register_post_type( 'recent-update', $args );
 	}
-
-
 }

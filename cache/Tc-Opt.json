@@ -1,1 +1,12 @@
-{"version":"1.2","body-class":"grey lighten-2 black-text text-lighten-3", "left-sidebar":"1","right-sidebar":"1","enable-container":0,"footer-class":"green","main-class":"white","left-sidebar-background-class":"grey lighten-2", "right-sidebar-background-class":"grey lighten-2"}
+{
+	"version"								:	"1.2",
+	"body-class"							:	"white grey-text text-darken-3", 
+	"nav-class"								:	"grey blue-text text-darken-2",
+	"left-sidebar"							:	"0",
+	"right-sidebar"							:	"1",
+	"enable-container"						:	"1",
+	"footer-class"							:	"grey",
+	"main-class"							:	"white",
+	"left-sidebar-background-class"			:	"", 
+	"right-sidebar-background-class"		:	""
+}
